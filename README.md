@@ -1,5 +1,5 @@
 # grannysmith
-A small Python script to check for stock levels of new Apple iPhones
+A small Python script to check for stock levels of new Apple iPhones (with some sensible default values).
 
 ### Installation
 
@@ -21,4 +21,4 @@ venv/bin/grannysmith
 
 ### Screenshot
 
-![screenshot](https://github.com/donny/grannysmith/raw/master/screenshot.png)
+![screen](https://github.com/donny/grannysmith/raw/master/screen.png)
