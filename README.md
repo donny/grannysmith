@@ -1,2 +1,2 @@
 # grannysmith
-A small Python script to check for the stock of new Apple items
+A small Python script to check for stock levels of new Apple iPhones

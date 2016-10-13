@@ -1,6 +1,41 @@
 import grannysmith
 import click
 
+from .items import *
+
 @click.command()
-def main():
-    click.echo(grannysmith.joke())
+@click.option('--postcode', default='3000')
+@click.option('--model', default='7+', type=click.Choice(['7', '7+']))
+@click.option('--finish', default='Black', type=click.Choice(['JetBlack', 'Black', 'Silver', 'Gold', 'RoseGold']))
+@click.option('--storage', default='32', type=click.Choice(['32', '128', '256']))
+def main(postcode, model, finish, storage):
+    """grannysmith checks stock levels for the specified Apple iPhones
+    around a particular Australian postcode."""
+
+    # click.echo(grannysmith.joke())
+    #click.echo('Postcode %s' % postcode)
+    # click.echo(items)
+
+    click.echo(click.style('Searching for ', fg='yellow'), nl=False)
+    click.echo(click.style('iPhone %s' % model, fg='red'), nl=False)
+    click.echo(click.style(' %s' % finish, fg='green'), nl=False)
+    click.echo(click.style(' %sGB' % storage, fg='blue'), nl=False)
+    click.echo(click.style(' in Apple stores around postcode', fg='yellow'), nl=False)
+    click.echo(click.style(' %s' % postcode, fg='cyan'), nl=True)
+
+    #tuples = [(index, item['id']) for index, item in enumerate(items)]
+    #string = "&".join("parts.%s=%s" % tuple for tuple in tuples)
+    # print(string)
+
+    tuples = [(index, item['id'])
+              for index, item in enumerate(items)
+              if item['model'] == model
+              and item['finish'] == finish
+              and item['storage'] == storage
+              ]
+    string = "&".join("parts.%s=%s" % tuple for tuple in tuples)
+    print(tuples)
+
+
+
+
