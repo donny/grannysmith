@@ -13,8 +13,12 @@ grannysmith
 The recommended way:
 
 ```
-virtualenv grannysmith
-source grannysmith/bin/activate
+virtualenv venv
+source venv/bin/activate
 pip install grannysmith
-grannysmith/bin/grannysmith
+venv/bin/grannysmith
 ```
+
+### Screenshot
+
+![screenshot](https://github.com/donny/grannysmith/raw/master/screenshot.png)
