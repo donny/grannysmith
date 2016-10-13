@@ -7,7 +7,8 @@ setup(
     author='Donny Kurniawan',
     packages=['grannysmith'],
     install_requires=[
-        'Click'
+        'click',
+        'requests'
     ],
     entry_points={
         'console_scripts': ['grannysmith=grannysmith.command_line:main']
